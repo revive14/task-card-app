@@ -1,9 +1,28 @@
 import { Component } from '@angular/core';
 
+import { Task } from './model/task';
+
 @Component ({
+    moduleId: module.id,
     selector: 'my-app',
-    template: '<h1>Skeleton project</h1>',
+    templateUrl: 'app.component.html'
 
 })
 
-export class AppComponent { }
+export class AppComponent {
+    private tasks = [
+            new Task(
+                "Buy a monkey",
+                false
+            ),
+            new Task(
+                "feed the baby",
+                true
+            ),
+            new Task(
+                "change diapers",
+                false
+)
+        ]
+
+}
