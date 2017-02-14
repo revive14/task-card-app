@@ -1,3 +1,16 @@
 <div class="container">
-    <app-card *ngFor="let task of tasks" [task] = "task"></app-card>
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-md-center">
+            <form  class="form-inline" (ngSubmit)="addTask()" #taskForm="ngForm">
+                <div class="form-group">
+                    <label for="content-field" class="sr-only">Task</label>
+                    <input type="text" id="content-field" class="form-control" placeholder="Enter a task" [(ngModel)]="currentTask.content" name="content" required>
+                    <button type='submit' class="btn btn-primary" [disabled]="taskForm.form.invalid"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <app-card *ngFor="let task of tasks" [task] = "task"></app-card>
+    </div>
 </div>

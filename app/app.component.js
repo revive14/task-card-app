@@ -17,12 +17,19 @@ var AppComponent = (function () {
             new task_1.Task("feed the baby", true),
             new task_1.Task("change diapers", false)
         ];
+        this.currentTask = new task_1.Task(null, false);
     }
+    AppComponent.prototype.addTask = function () {
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.complete);
+        this.tasks.push(task);
+        this.currentTask.content = null;
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            templateUrl: 'app.component.html'
+            templateUrl: 'app.component.html',
+            styleUrls: ['app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
