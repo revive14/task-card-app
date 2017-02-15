@@ -6,10 +6,16 @@
     margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn,
+.btn:disabled:hover{
     background-color: #009688;
     border-color: #009688;
     margin-left: 2rem;
+}
+
+.btn:hover{
+    background-color: #00796b;
+    border-color: #00796b;
 }
 
 
@@ -20,4 +26,10 @@
 
 i{
     padding-right: .5rem;
+}
+
+p{
+    color: lightgrey;
+    text-align: center;
+
 }

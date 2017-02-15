@@ -11,20 +11,7 @@ import { Task } from './model/task';
 })
 
 export class AppComponent {
-    private tasks = [
-            new Task(
-                "Buy a monkey",
-                false
-            ),
-            new Task(
-                "feed the baby",
-                true
-            ),
-            new Task(
-                "change diapers",
-                false
-)
-        ];
+    private tasks: Task[] = [];
 
     private currentTask = new Task(null,false);
 
